@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Проверка кода авторизации</h1>
+
+<p>
+    <label>
+        <input type="text" id="auth_code" placeholder="Код из почты">
+    </label>
+
+    <button onclick="check_admin_auth_code()">Отправить</button>
+</p>
+
+<script src="{{ .Domain }}/js/admin_auth_code.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!--    <script src="library.js"></script>-->
+    <link rel="stylesheet" type="text/css" media="all" href="{{ .Domain }}/css/sign-in.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,350,400,500,700,800,900"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+
+
+</head>
+
+
+<body>
+<div id="body-wrapper">
+    <div id="background">
+        <div id="content-mobile">
+            <div id="Left-B">
+                <div id="blur1"></div>
+                <div id="IMG1">
+                    <img class="IMG1" src="{{ .Domain }}/img/img1.png">
+                    <img class="IMG2" src="{{ .Domain }}/img/img2.png">
+                    <img class="roses" src="{{ .Domain }}/img/roses.png">
+                </div>
+                <div id="blur2">
+                </div>
+
+            </div>
+        </div>
+
+        <div id="Right-B">
+            <div id="content-pk">
+                <div id="B-title1" class="title1">
+                    вход в личный кабинет
+                </div>
+                <div id="B-login">
+                    <label for="login">
+                        <input id="login" class="login" onfocus="focusL(this)" type="text" placeholder="Логин...">
+                        <!--  LOGIN   -->
+                    </label>
+                </div>
+                <div id="B-password">
+                    <label for="password">
+                        <input id="password" class="password" onfocus="focusP(this)" type="text"
+                               placeholder="Пароль...">
+                        <!--  PASSWORD   -->
+                    </label>
+                    <div class="textError"></div>
+                    <div class="forgotPassword"><a href="{{ .Domain }}/auth/sign-in/forgot-pass/">Забыли
+                        пароль?</a></div>
+                </div>
+                <div id="B-Enroll">
+                    <button type="text" onclick="sign_in()" class="Enroll">ВОЙТИ</button>
+                </div>
+
+                <div id="or">
+                    Или продолжить через
+                </div>
+
+                <div class="vk">
+                    <a href="{{ .Url }}"><img class="imgVk" src="{{ .Domain }}/img/vk_logo.png"></a>
+                </div>
+
+                <div class="registration">
+                    <a href="{{ .Domain }}/auth/sign-up/">У меня ещё нет аккаунта.</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ .Domain }}/js/sign_in_form.js"></script>
+
+
+</body>
+</html>

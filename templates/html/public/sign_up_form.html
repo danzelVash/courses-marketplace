@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body style="text-align:center;" id="body">
+
+<h1> Регистрация </h1>
+
+<p id="message">Пожалуйста, заполните все поля формы, это может понадобиться, если вы забудете пароль!</p>
+
+<p>
+    <label for="last-name">
+        <input type="text" id="last-name" placeholder="Фамилия">
+    </label>
+    <label for="first-name">
+        <input type="text" id="first-name" placeholder="Имя">
+    </label>
+    <label for="email">
+        <input type="text" id="email" placeholder="Email">
+    </label>
+    <label for="phone-number">
+        <input type="text" id="phone-number" placeholder="Номер телефона" data-phone-pattern>
+    </label>
+    <button onclick="sign_up()">Зарегистрироваться</button>
+
+    <a href="{{ .Url }}">Зарегистрироваться через вк</a>
+</p>
+
+<script src="{{ .Domain }}/js/sign_up_form.js"></script>
+
+</body>
+</html>

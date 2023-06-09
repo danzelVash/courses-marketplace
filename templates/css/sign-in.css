@@ -1,0 +1,441 @@
+@import "https://fonts.fontstorage.com/import/bebasneue.css";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    scroll-behavior: smooth;
+    background-color: rgba(21, 18, 15, 100%);
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#body-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#background {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(21, 18, 15, 100%);
+}
+
+#Left-B {
+    height: 100vh;
+    width: 105vh;
+    min-width: 50%;
+    z-index: 0;
+    position: absolute;
+}
+
+#IMG1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+
+.IMG1 {
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+    position: absolute;
+}
+
+.roses {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+#blur2 {
+    top: 28vh;
+    right: 23vh;
+    width: 73vh;
+    height: 73vh;
+    background: rgba(219, 149, 106, 0.64);
+    z-index: -100;
+    position: absolute;
+    border-radius: 100%;
+    -webkit-filter: blur(24vh);
+    -moz-filter: blur(24vh);
+    -ms-filter: blur(24vh);
+    filter: blur(24vh);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+#Right-B {
+    float: right;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+}
+
+#content-pk {
+    max-width: 90vh;
+    height: 100%;
+}
+
+#B-title1 {
+    width: 96%;
+    text-align: center;
+    margin: 20vh auto 0 auto;
+}
+
+.title1 {
+    font-family: 'Bebas Neue';
+    color: #FFFFFF;
+    font-size: 7.3vh;
+    letter-spacing: 0.115em;
+    font-weight: 200;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+#B-login {
+    height: 9vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login {
+    width: 100%;
+    border: 0;
+    font-size: 3vh;
+    padding: 0;
+    float: left;
+    height: 7vh;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    border-radius: 0.8vh;
+    outline: none;
+    padding-left: 3vh;
+    margin-left: -1.5vh;
+    background-color: #4A3E33;
+    color: #FFFFFF;
+}
+
+
+#B-password {
+    width: 90%;
+    height: 13vh;
+    margin: 0 auto;
+}
+
+.password {
+    width: 100%;
+    border: 0;
+    font-size: 3vh;
+    padding: 0;
+    float: left;
+    height: 7vh;
+    font-family: 'Montserrat';
+    font-weight: 350;
+    border-radius: 0.8vh;
+    outline: none;
+    padding-left: 3vh;
+    margin-left: -1.5vh;
+    background-color: #4A3E33;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.login.redOutline {
+    outline: 0.2vh solid #FF0000;
+}
+
+.password.redOutline {
+    outline: 0.2vh solid #FF0000;
+}
+
+.textError {
+    float: left;
+    width: 75%;
+    margin-top: 1vh;
+    font-family: 'Montserrat';
+    font-size: 1.8vh;
+    font-weight: 400;
+    color: #FF0000;
+    display: none;
+}
+
+.textError.active {
+    display: block;
+}
+
+.forgotPassword {
+    font-family: 'Montserrat';
+    font-size: 1.8vh;
+    font-weight: 500;
+    margin-top: 1vh;
+    width: 25%;
+    text-align: right;
+    float: right;
+}
+
+.forgotPassword a {
+    color: #C6B5AA;
+    text-decoration: underline;
+    outline: none;
+    cursor: pointer; /* cursor: default;*/
+}
+
+
+#B-Enroll {
+    text-align: center;
+    margin: 0 auto;
+    width: 40vh;
+    height: 10vh;
+    margin-top: 1vh;
+}
+
+.Enroll {
+    float: left;
+    width: 100%;
+    height: 8.5vh;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.7vh;
+    text-align: center;
+    color: #FFFFFF;
+    background: radial-gradient(43.99% 171.7% at 49.91% 49.78%, #FFBA91 0%, #D99369 73.72%);
+    box-shadow: 0px 0.3vh 0px #A57253, 0px 0.3vh 6vh rgba(252, 180, 136, 0.55);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    top: 1vh;
+    border-radius: 10% 10% 10% 10% / 15vh 15vh 15vh 15vh; /*  горизонтальные / вертикальные  */
+    border: 0;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+#or {
+    width: 100%;
+    height: 4vh;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: #C6B5AA;
+    text-align: center;
+    margin-top: 3vh;
+    font-size: 2vh;
+}
+
+.vk {
+    width: 5vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.imgVk {
+    height: 5vh;
+    display: block;
+}
+
+.registration {
+    color: #FFE0CC;
+    font-size: 2vh;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 6vh;
+}
+
+.registration a {
+    text-decoration: none;
+    color: #FFCDAF;
+    outline: none;
+}
+
+.IMG2 {
+    display: none;
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .pk {
+        display: none;
+    }
+
+    #body-wrapper {
+        position: relative;
+        width: 600px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    #content-mobile {
+        width: 100%;
+
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #content-pk {
+        max-width: 100%;
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #Left-B {
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 199;
+    }
+
+    #IMG1 {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .IMG1 {
+        display: none;
+    }
+
+    .IMG2 {
+        display: block;
+        margin: 0 auto;
+        max-width: 95%;
+        width: 500px;
+    }
+
+    #blur2 {
+        top: -390px;
+        right: 6px;
+        width: 400px;
+        height: 400px;
+        z-index: 1;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        -webkit-filter: blur(150px);
+        -moz-filter: blur(150px);
+        -ms-filter: blur(150px);
+        filter: blur(150px);
+    }
+
+    .roses {
+        display: none;
+    }
+
+    #Right-B {
+        width: 100%;
+        margin-top: -120px;
+        height: 60%;
+        z-index: 299;
+    }
+
+    #B-title1 {
+        margin-top: 0;
+        height: 65px;
+    }
+
+    .title1 {
+        font-size: 40px;
+        letter-spacing: 0.115em;
+        font-weight: 300;
+    }
+
+    #B-login {
+        width: 66%;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    .login {
+        font-size: 20px;
+        height: 46px;
+        padding-left: 20px;
+        margin-left: -10px;
+    }
+
+    #B-password {
+        width: 66%;
+        height: 60px;
+    }
+
+    .password {
+        font-size: 20px;
+        height: 46px;
+        padding-left: 20px;
+        margin-left: -10px;
+    }
+
+    .login.redOutline {
+        outline: 1px solid #FF0000;
+    }
+
+    .password.redOutline {
+        outline: 1px solid #FF0000;
+    }
+
+    .textError {
+        width: 60%;
+        overflow: hidden;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        display: none;
+    }
+
+    .textError.active {
+        display: block;
+    }
+
+    .forgotPassword {
+        width: 40%;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+    #B-Enroll {
+        width: 260px;
+        height: 56px;
+        margin-top: 32px;
+        overflow: hidden;
+        border-radius: 15% 15% 15% 15% / 148px 148px 148px 148px;
+    }
+
+    .Enroll {
+        top: 0px;
+        height: 56px;
+        font-size: 17.7px;
+        border-radius: 15% 15% 15% 15% / 148px 148px 148px 148px;
+        box-shadow: 0px 2.4px 0px #A57253, 0px 2.4px 47px rgba(252, 180, 136, 0.55);
+    }
+
+    #or {
+        height: 32px;
+        margin-top: 24px;
+        font-size: 17.7px;
+    }
+
+    .vk {
+        width: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .imgVk {
+        height: 50px;
+        display: block;
+    }
+
+    .registration {
+        margin-top: 60px;
+        font-size: 17.7px;
+    }
+}

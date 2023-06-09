@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Вход в админ панель</h1>
+
+<p>
+    <label for="admin_login">
+        <input type="text" id="admin_login" placeholder="login">
+    </label>
+    <label for="admin_password">
+        <input type="text" id="admin_password" placeholder="пароль">
+    </label>
+
+    <button onclick="sign_in_admin()">Войти</button>
+</p>
+
+<script src="{{ .Domain }}/js/admin.js"></script>
+
+</body>
+</html>

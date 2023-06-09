@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <style type="text/css">
+        header,
+        main,
+        footer {
+            padding-left: 240px;
+        }
+
+        body {
+            backgroud: white;
+        }
+
+        @media only screen and (max-width: 992px) {
+            header,
+            main,
+            footer {
+                padding-left: 0;
+            }
+        }
+
+        #credits li,
+        #credits li a {
+            color: white;
+        }
+
+        #credits li a {
+            font-weight: bold;
+        }
+
+        .footer-copyright .container,
+        .footer-copyright .container a {
+            color: #BCC2E2;
+        }
+
+        .fab-tip {
+            position: fixed;
+            right: 85px;
+            padding: 0px 0.5rem;
+            text-align: right;
+            background-color: #323232;
+            border-radius: 2px;
+            color: #FFF;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+{{ .LeftBar }}
+
+<header>
+    <ul class="dropdown-content" id="user_dropdown">
+        <li><a class="brown-text" href="#!">Logout</a></li>
+    </ul>
+
+    <nav class="brown" role="navigation">
+        <div class="nav-wrapper">
+            <a style="margin-left: 5%; font-size: 20px" data-activates="slide-out" class="button-collapse show-on-large"
+               href="#!">Меню</a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
+                </li>
+            </ul>
+
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+
+    <nav>
+        <div class="nav-wrapper brown darken-2">
+            <a style="margin-left: 20px;" class="breadcrumb" href="{{ .Domain }}/admin/panel/">Главная</a>
+            <a class="breadcrumb" href="{{ .Domain }}/admin/panel/video-lessons/">Видеоуроки</a>
+            <a class="breadcrumb" href="{{ .Domain }}/admin/panel/video-lessons/upload/">Добавить</a>
+
+            <div style="margin-right: 20px;" id="timestamp" class="right"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="col s12">
+        <div style="padding: 35px;" class="card">
+            <div class="row">
+                <!--                <form class="col s12">-->
+
+                <div class="row">
+                    <div class="input-field col s5">
+                        <input id="title" type="text" class="validate">
+                        <label for="title">Название видеоурока</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                            <textarea id="description" class="materialize-textarea validate"
+                                      style="padding: 0"></textarea>
+                        <label for="description">Описание видеурока</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field" style="padding-left: 1%; margin: 0">
+                        <div class="btn brown lighten">
+                            <span>Видео</span>
+                            <input id="video" type="file" accept="video/*">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input id="video_name" class="file-path validate" type="text"
+                                   placeholder="Один файл">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field" style="padding-left: 1%; margin: 0">
+                        <div class="btn brown lighten">
+                            <span>Доп Материалы</span>
+                            <input id="additional_files" type="file" accept=".jpg, .jpeg, .png, .pdf" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input id="additional_filenames" class="file-path validate" type="text"
+                                   placeholder="Один или несколько файлов">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s5">
+                        <input id="price" type="text"
+                               oninput="this.value=this.value.replace(/[^0-9\.]/g,'').replace(/(\..*)\./g, '$1');"/>
+
+                        <label for="price">Цена урока</label>
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light brown darken-1" style="margin-left: 1%"
+                        onclick="add_lesson()">
+                    Добавить
+                    <i class="material-icons right">send</i>
+                </button>
+                <!--                </form>-->
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large pink waves-effect waves-light">
+            <i class="large material-icons">add</i>
+        </a>
+
+        <ul>
+            <li>
+                <a class="btn-floating red"><i class="material-icons">note_add</i></a>
+                <a href="" class="btn-floating fab-tip">Add a note</a>
+            </li>
+
+            <li>
+                <a class="btn-floating yellow darken-1"><i class="material-icons">add_a_photo</i></a>
+                <a href="" class="btn-floating fab-tip">Add a photo</a>
+            </li>
+
+            <li>
+                <a class="btn-floating green"><i class="material-icons">alarm_add</i></a>
+                <a href="" class="btn-floating fab-tip">Add an alarm</a>
+            </li>
+
+            <li>
+                <a class="btn-floating blue"><i class="material-icons">vpn_key</i></a>
+                <a href="" class="btn-floating fab-tip">Add a master password</a>
+            </li>
+        </ul>
+    </div>
+</main>
+
+{{ .Footer }}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.button-collapse').sideNav();
+        $('.collapsible').collapsible();
+        $('select').material_select();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="{{ .Domain }}/js/admin_video_lessons_upload.js"></script>
+
+
+</body>
+</html>

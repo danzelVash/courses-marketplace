@@ -1,0 +1,4 @@
+.idea
+.env
+pgdata
+internal/pkg/configs/config.yml

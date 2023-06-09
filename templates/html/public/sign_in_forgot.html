@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Для того, чтобы восстановить пароль, вы должны ввести код, из почты, которую вы ввели при регистрации на сайте</p>
+
+<p>
+    <label for="email">
+        <input type="text" id="email" placeholder="Логин (Электронная почта)">
+    </label>
+
+    <button onclick="get_code()">Получить код</button>
+</p>
+
+<p>
+    <label for="code">
+        <input type="number" id="code" placeholder="Код из почты...">
+    </label>
+
+    <button onclick="check_code()">Отправить</button>
+</p>
+
+<script src="{{ .Domain }}/js/sign_in_forgot.js"></script>
+
+</body>
+</html>
