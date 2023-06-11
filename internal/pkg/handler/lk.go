@@ -84,8 +84,3 @@ func (h *Handler) videoHandler(ctx *gin.Context) {
 	}
 
 }
-
-// id ключа
-//YCAJEmZbeGxDArIoF33HOoFdK
-//secret
-//YCNEKkLF_UZbDqbnryYwUX_AttbI107yOOfvzAZA
