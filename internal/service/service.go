@@ -3,10 +3,11 @@ package service
 import (
 	"context"
 	"io"
-	courses "mom"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/m3u8_generator"
-	"mom/internal/pkg/repository"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/internal/repository"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/m3u8_generator"
 )
 
 type Authorization interface {

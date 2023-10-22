@@ -2,10 +2,12 @@ package handler
 
 import (
 	"fmt"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/pkg/template_parser"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	courses "mom"
-	"mom/internal/libraries/template_parser"
+
 	"net/http"
 	"strconv"
 )

@@ -2,10 +2,12 @@ package handler
 
 import (
 	"fmt"
+
+	"github.com/danzelVash/courses-marketplace/pkg/aws_sdk"
+	"github.com/danzelVash/courses-marketplace/pkg/template_parser"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"mom/internal/libraries/aws_sdk"
-	"mom/internal/libraries/template_parser"
+
 	"net/http"
 	"path/filepath"
 	"strconv"

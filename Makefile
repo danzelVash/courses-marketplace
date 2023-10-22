@@ -1,6 +1,6 @@
 .SILENT:
 
-run:
+infra:
 	sudo docker-compose up -d --build
-clean:
+infra-stop:
 	sudo docker-compose down && sudo docker image prune

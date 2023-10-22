@@ -3,13 +3,14 @@ package service
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/spf13/viper"
 	"io"
 	"io/ioutil"
-	courses "mom"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/spf13/viper"
 )
 
 type UrlParams struct {

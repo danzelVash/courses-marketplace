@@ -2,11 +2,12 @@ package handler
 
 import (
 	"fmt"
+	"io"
+	"net/http"
+
+	"github.com/danzelVash/courses-marketplace"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"io"
-	courses "mom"
-	"net/http"
 )
 
 func (h *Handler) oauthVK(ctx *gin.Context) {

@@ -1,16 +1,17 @@
 package main
 
 import (
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/internal/handler"
+	"github.com/danzelVash/courses-marketplace/internal/repository"
+	"github.com/danzelVash/courses-marketplace/internal/service"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/storage"
 	_ "github.com/jackc/pgx"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"github.com/spf13/viper"
-	"mom"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/storage"
-	"mom/internal/pkg/handler"
-	"mom/internal/pkg/repository"
-	"mom/internal/pkg/service"
+
 	"os"
 )
 
@@ -53,7 +54,7 @@ func main() {
 }
 
 func initConfig() error {
-	viper.AddConfigPath("internal/pkg/configs")
+	viper.AddConfigPath("internal/configs")
 	viper.SetConfigName("config")
 	return viper.ReadInConfig()
 }

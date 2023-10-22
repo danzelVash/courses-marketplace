@@ -2,14 +2,16 @@ package service
 
 import (
 	"context"
-	"github.com/spf13/viper"
 	"math/rand"
-	courses "mom"
-	"mom/internal/libraries/aws_sdk"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/m3u8_generator"
-	"mom/internal/libraries/smtp"
-	"mom/internal/pkg/repository"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/internal/repository"
+	"github.com/danzelVash/courses-marketplace/pkg/aws_sdk"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/m3u8_generator"
+	"github.com/danzelVash/courses-marketplace/pkg/smtp"
+	"github.com/spf13/viper"
+
 	"os"
 	"path/filepath"
 	"strconv"

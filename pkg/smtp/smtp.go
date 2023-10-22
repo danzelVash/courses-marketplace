@@ -2,15 +2,16 @@ package smtp
 
 import (
 	"bytes"
-	"github.com/pkg/errors"
-	"github.com/spf13/viper"
-	"gopkg.in/gomail.v2"
 	"html/template"
-	courses "mom"
 	"net"
 	"net/mail"
 	"os"
 	"strings"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/pkg/errors"
+	"github.com/spf13/viper"
+	"gopkg.in/gomail.v2"
 )
 
 type EmailParams struct {

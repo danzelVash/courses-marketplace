@@ -1,10 +1,11 @@
 package service
 
 import (
-	courses "mom"
-	"mom/internal/libraries/logging"
-	"mom/internal/pkg/repository"
 	"time"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/internal/repository"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
 )
 
 var cleanersNum int

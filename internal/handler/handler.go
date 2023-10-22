@@ -1,11 +1,12 @@
 package handler
 
 import (
+	"github.com/danzelVash/courses-marketplace/internal/service"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/template_parser"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/template_parser"
-	"mom/internal/pkg/service"
+
 	"net/http"
 )
 

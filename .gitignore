@@ -1,4 +1,4 @@
 .idea
 .env
 pgdata
-internal/pkg/configs/config.yml
+pkg/configs/config.yml

@@ -1,10 +1,11 @@
 package storage
 
 import (
-	"github.com/sirupsen/logrus"
-	courses "mom"
 	"sync"
 	"time"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/sirupsen/logrus"
 )
 
 type DataStorage struct {

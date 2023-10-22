@@ -2,11 +2,12 @@ package logging
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"io"
 	"os"
 	"runtime"
 	"time"
+
+	"github.com/sirupsen/logrus"
 )
 
 type Hooks struct {

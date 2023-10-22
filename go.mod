@@ -1,4 +1,4 @@
-module mom
+module github.com/danzelVash/courses-marketplace
 
 go 1.18
 

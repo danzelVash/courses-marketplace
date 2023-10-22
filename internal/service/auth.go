@@ -1,13 +1,15 @@
 package service
 
 import (
+	"math/rand"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/internal/repository"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/smtp"
 	"github.com/spf13/viper"
 	"golang.org/x/crypto/bcrypt"
-	"math/rand"
-	courses "mom"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/smtp"
-	"mom/internal/pkg/repository"
+
 	"os"
 	"strconv"
 	"time"

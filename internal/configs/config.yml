@@ -1,0 +1,21 @@
+port: "8080"
+
+db:
+  username: "danzelVash"
+  host: "postgres"
+  port: "5432"
+  dbname: "courses"
+  sslmode: "disable"
+
+vk:
+  clientId: "51567463"
+  redirectURI: "http://localhost/auth/oauthVK/"
+
+gmail:
+  supportAddress: "permanent.pro.ekb.suport@gmail.com"
+
+domain: "http://localhost"
+set_cookie_domain: "localhost"
+
+yndx_obj_strg:
+  region: "ru-central1"

@@ -3,9 +3,10 @@ package template_parser
 import (
 	"bytes"
 	"fmt"
-	"github.com/pkg/errors"
 	"html/template"
 	"io/ioutil"
+
+	"github.com/pkg/errors"
 )
 
 type TemplateParams struct {

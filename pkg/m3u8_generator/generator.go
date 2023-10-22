@@ -3,12 +3,13 @@ package m3u8_generator
 import (
 	"context"
 	"fmt"
-	"github.com/pkg/errors"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
 	"sync"
+
+	"github.com/pkg/errors"
 )
 
 /*
@@ -22,7 +23,7 @@ ffmpeg -i input.mp4 \
 
 const (
 	hlsFragmentDuration = "10"
-	globTmpDir          = "internal/libraries/m3u8_generator/tmp"
+	globTmpDir          = "internal/pkg/m3u8_generator/tmp"
 	resolutionsForCmd   = "1920:1280:854"
 	resNames            = "1080:720:480"
 	bitrateP1080        = "6000"

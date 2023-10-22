@@ -3,10 +3,12 @@ package repository
 import (
 	"database/sql"
 	"fmt"
+
+	"github.com/danzelVash/courses-marketplace"
+	"github.com/danzelVash/courses-marketplace/pkg/logging"
+	"github.com/danzelVash/courses-marketplace/pkg/storage"
 	"github.com/jmoiron/sqlx"
-	courses "mom"
-	"mom/internal/libraries/logging"
-	"mom/internal/libraries/storage"
+
 	"time"
 )
 

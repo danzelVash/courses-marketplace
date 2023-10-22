@@ -3,15 +3,17 @@ package handler
 import (
 	"bytes"
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/mozillazg/go-unidecode"
-	"github.com/spf13/viper"
 	"html/template"
 	"io"
 	"mime/multipart"
-	courses "mom"
-	m3u8 "mom/internal/libraries/m3u8_generator"
-	"mom/internal/libraries/template_parser"
+
+	"github.com/danzelVash/courses-marketplace"
+	m3u8 "github.com/danzelVash/courses-marketplace/pkg/m3u8_generator"
+	"github.com/danzelVash/courses-marketplace/pkg/template_parser"
+	"github.com/gin-gonic/gin"
+	"github.com/mozillazg/go-unidecode"
+	"github.com/spf13/viper"
+
 	"net/http"
 	"os"
 	"path/filepath"
@@ -21,7 +23,7 @@ import (
 )
 
 const (
-	m3u8TmpDir            = "internal/libraries/m3u8_generator/tmp"
+	m3u8TmpDir            = "internal/pkg/m3u8_generator/tmp"
 	additionalFilesTmpDir = "internal/pkg/handler/tmp"
 )
 
