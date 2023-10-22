@@ -14,3 +14,6 @@ time="Fri, 09 Jun 2023 12:50:44 UTC" level=error msg="error while trying load ob
 time="Fri, 09 Jun 2023 12:50:48 UTC" level=error msg="error sending request to db while checking admin session" func="mom/internal/pkg/repository.(*AdminPostgres).CheckSession()" file="/pkg/repository/admin_pstdrs.go:63"
 time="Sun, 22 Oct 2023 16:03:30 MSK" level=fatal msg="error reading config file Config File \"config\" Not Found in \"[/home/danzelvash/GolandProjects/courses/internal/pkg/configs]\"" func="main.main()" file="/courses/cmd/main.go:21"
 time="Sun, 22 Oct 2023 16:04:05 MSK" level=fatal msg="error init db: dial tcp: lookup postgres on 127.0.0.53:53: server misbehaving" func="main.main()" file="/courses/cmd/main.go:38"
+time="Sun, 22 Oct 2023 13:12:46 UTC" level=info msg="user was login as admin, need to check email" func="github.com/danzelVash/courses-marketplace/internal/api.(*Handler).authAdmin()" file="/internal/api/admin.go:69"
+time="Sun, 22 Oct 2023 17:14:57 MSK" level=fatal msg="error init db: dial tcp: lookup postgres on 127.0.0.53:53: server misbehaving" func="main.main()" file="/courses/cmd/main.go:38"
+time="Sun, 22 Oct 2023 17:15:27 MSK" level=fatal msg="error init db: dial tcp: lookup postgres on 127.0.0.53:53: server misbehaving" func="main.main()" file="/courses/cmd/main.go:38"

@@ -1,4 +1,6 @@
 .idea
 .env
+./logs
 pgdata
+.schema
 pkg/configs/config.yml

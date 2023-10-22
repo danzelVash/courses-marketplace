@@ -1,4 +1,4 @@
-package handler
+package api
 
 import (
 	"bytes"
@@ -24,7 +24,7 @@ import (
 
 const (
 	m3u8TmpDir            = "internal/pkg/m3u8_generator/tmp"
-	additionalFilesTmpDir = "internal/pkg/handler/tmp"
+	additionalFilesTmpDir = "internal/pkg/api/tmp"
 )
 
 func (h *Handler) adminAuthPage(ctx *gin.Context) {
@@ -507,7 +507,7 @@ func writeMultipartPartToString(chunk *multipart.Part) (int64, string, error) {
 //		return err
 //	}
 //
-//	file, err := os.Create("internal/pkg/handler/saved/" + filename)
+//	file, err := os.Create("internal/pkg/api/saved/" + filename)
 //	if err != nil {
 //		return err
 //	}

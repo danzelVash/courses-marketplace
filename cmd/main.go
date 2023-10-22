@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/danzelVash/courses-marketplace"
-	"github.com/danzelVash/courses-marketplace/internal/handler"
+	"github.com/danzelVash/courses-marketplace/internal/api"
 	"github.com/danzelVash/courses-marketplace/internal/repository"
 	"github.com/danzelVash/courses-marketplace/internal/service"
 	"github.com/danzelVash/courses-marketplace/pkg/logging"
@@ -42,7 +42,7 @@ func main() {
 
 	repos := repository.NewRepository(db, strg, logger)
 	services := service.NewService(repos, logger)
-	handlers := handler.NewHandler(services, logger)
+	handlers := api.NewHandler(services, logger)
 
 	go services.Authorization.CleanExpiredSessions()
 
